@@ -3,83 +3,148 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Emanuele Pardini</title>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <title>Your Name</title>
+    
     <style>
-         body {
-            background-color: #f5f5f5;
-            color: rgb(32,32,32);
-            font-family: 'Lato', sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
+        html, body {
+            height: 100%;
             margin: 0;
-            text-align: center;
-            flex-direction: column;
+            padding: 0;
         }
-        .profile-photo {
-            border-radius: 50%;
-            width: 250px;
-            height: 250px;
-            /*border: 3px solid rgb(32,32,32);*/
+
+        body {
+            font-family: 'Georgia', serif; /* Using Georgia font */
+            background-color: #FEFCFB;
+            display: flex;
+            height: 100%;
         }
-        .description-box {
-            background-color: #f5f5f5;
-            border: 2px solid #555;
-            border-radius: 10px;
+
+        .sidebar {
+            background-color: #95bf74;
+            width: 300px;
             padding: 20px;
+            height: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            box-shadow: 4px 0 8px rgba(0, 0, 0, 0.1);
+            overflow-y: auto;
+        }
+
+        .sidebar img {
+            max-width: 100%;
+            border-radius: 50%;
+            margin-bottom: 15px;
+        }
+
+        .sidebar .info {
+            margin: 10px 0;
+        }
+
+        .sidebar .links a {
+            display: block;
+            margin: 10px 0;
+            color: #222;
+            text-decoration: none;
+        }
+
+        .sidebar .links a:hover {
+            text-decoration: underline;
+        }
+
+        .main-content {
+            margin-left: 320px;
+            padding: 20px 30px;
+            flex: 1;
+            height: 100%;
+            overflow-y: auto;
+        }
+
+        header {
+            text-align: center;
             margin-bottom: 20px;
-            width: 80%;
-            max-width: 600px;
-            color: rgb(32,32,32);
         }
-        .social-links {
+
+        .title {
+            font-weight: bold;
+            font-size: 2em;
+        }
+
+        .line {
+            width: calc(100% - 340px);
+            border: 1px solid #222;
+            margin: 10px auto;
+        }
+
+        .description {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .description p {
+            font-size: 1.1em;
+        }
+
+        .links a {
+            font-weight: bold;
+            color: #222;
+            text-decoration: none;
+        }
+
+        .links a:hover {
+            text-decoration: underline;
+        }
+
+        .links {
+            text-align: center;
+        }
+
+        .home-text {
+            display: block;
             margin-top: 20px;
+            text-align: center;
+            font-size: 1em;
+            font-weight: normal;
+            color: #222;
+            text-decoration: none;
         }
-        .social-links a {
-            margin: 0 30px;
-            display: inline-block;
-        }
-        .social-links img {
-            width: 60px;
-            height: 60px;
-        }
-        .email-link img {
-            width: 60px;
-            height: 60px;
-            margin-top: 20px;
-        }
-        .copyright {
-            margin-top: 70px; /* Increase space above the copyright */
-            font-size: 13px;
-        }
-        .cv-link {
-            margin-top: 20px;
+
+        .home-text:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
-    <img src="round_image_paris.png" alt="My Photo" class="profile-photo">
-    <h1>Emanuele Pardini</h1>
-    <h3>Master's Student in Mathematics</h3>
-    <div class="description-box">
-        <p>Hello! I'm currently a master's student in mathematics at University of Pisa (here you can find <a href="CV_Emanuele_Pardini.pdf" target="_blank">my CV</a>). My studies focus on probability and statistics, with a particular interest in machine learning theory.</p>
+    <div class="sidebar">
+        <img src="round_image_paris.png" alt="Your Photo">
+        <h2>Emanuele Pardini</h2>
+        <div class="info">Email: <a href="mailto:pardini20@gmail.com">pardini20@gmail.com</a></div>
+        <div class="info">Current Position: Master's student in Mathematics</div>
+        <div class="links">
+            <a href="https://linkedin.com/in/emanuele-pardini-442549277" target="_blank">LinkedIn</a>
+            <a href="https://github.com/emapardini" target="_blank">GitHub</a>
+            <a href="CV_Emanuele_Pardini.pdf" download>Download CV</a>
+        </div>
     </div>
-    <div class="social-links">
-        <a href="https://github.com/emapardini" target="_blank">
-            <img src="287725_github_icon.png" alt="GitHub">
-        </a>
-        <a href="https://linkedin.com/in/emanuele-pardini-442549277" target="_blank">
-            <img src="2145348_in_linkedin_media_share_social_icon.png" alt="LinkedIn">
-        </a>
-        <a href="mailto:pardini20@gmail.com" class="email-link">
-            <img src="287692_mail_icon.png" alt="Email Me">
-        </a>
+
+    <div class="main-content">
+        <header>
+            <div class="title">Emanuele Pardini</div>
+            <div class="line"></div>
+            <div class="description">
+                <p>Welcome to my personal website! Here you'll find information about me, including my current work, links to my social media profiles, my photography portfolio, and my university notes. Feel free to explore!</p>
+                <p>I'm Emanuele Pardini, a master's student in Mathematics at the University of Pisa, passionate about both education and creativity.</p>
+            </div>
+        </header>
+
+        <div class="links">
+            <div class="line"></div>
+            <a href="notes.html">University Notes</a>
+            <div class="line"></div>
+            <a href="photography.html">Photography Archive</a>
+            <div class="line"></div>
+        </div>
     </div>
-    <br>
-    <div class="copyright">
-        &copy; 2024 Emanuele Pardini. All rights reserved.
-    </div>
+
 </body>
 </html>
