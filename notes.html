@@ -124,37 +124,19 @@
             text-decoration: underline;
         }
 
-         /* Mobile styles */
-         @media (max-width: 768px) {
+        /* Mobile styles */
+        @media (max-width: 768px) {
             body {
                 flex-direction: column; /* Stack elements vertically */
             }
 
-            /* Adjust sidebar width on mobile devices */
+            /* Adjust sidebar layout on mobile */
             .sidebar {
-                width: 100%; /* Full width for mobile */
+                width: 100%; /* Full width on mobile */
                 padding: 15px;
-                position: relative; /* Sidebar comes below in smaller screens */
-                margin-bottom: 15px; /* Space between sidebar and content */
-            }
-
-            /* Adjust the size of the title and description for smaller screens */
-            .name {
-                font-size: 1.5em; /* Slightly smaller title */
-            }
-
-            .description p {
-                font-size: 1em; /* Adjust text size */
-            }
-
-            .line {
-                width: 100%; /* Full-width lines for better readability */
-            }
-
-            /* Content area padding adjustments */
-            .main-content {
-                margin-left: 0; /* No margin needed, ensure full content width */
-                padding: 15px;
+                position: relative; /* Sidebar comes above the content on small screens */
+                margin-bottom: 20px; /* Space between sidebar and content */
+                height: auto; /* Don't stick to full height on small screens */
             }
 
             .sidebar img {
@@ -162,9 +144,41 @@
                 margin-bottom: 10px;
             }
 
+            /* Layout adjustment for photo and description to be next to each other */
+            .sidebar .info {
+                display: inline-block;
+                margin-right: 15px;
+            }
+
+            .sidebar .info a {
+                color: #333; /* For email link */
+                text-decoration: none;
+            }
+
+            .main-content {
+                margin-left: 0;
+                padding: 15px;
+                width: 100%;
+            }
+
+            /* Adjusting the name title size */
+            .name {
+                font-size: 1.5em; /* Slightly smaller title */
+            }
+
+            /* Reducing font sizes for mobile screen */
+            .description p {
+                font-size: 1em; /* Adjust text size */
+            }
+
+            /* Adjust the line widths for mobile devices */
+            .line {
+                width: 100%; /* Make the line full width on mobile screens */
+            }
+
+            /* Link styling adjustments */
             .links a {
                 font-size: 1.1em;
-                margin: 10px 0;
             }
         }
 
