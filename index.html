@@ -112,6 +112,82 @@
         .home-text:hover {
             text-decoration: underline;
         }
+
+        /* Sidebar settings for mobile */
+@media (max-width: 768px) {
+    /* Adjust sidebar width on mobile devices */
+    .sidebar {
+        width: 100%; /* Make the sidebar take up the full width */
+        padding: 15px;
+        box-shadow: none; /* Remove shadow for mobile */
+        position: relative; /* Keep the sidebar below the content */
+    }
+
+    /* Main content adjustments */
+    .main-content {
+        margin-left: 0; /* No space needed on the left */
+        padding: 15px;
+        width: 100%; /* Ensure full use of available width */
+    }
+
+    /* Links text adjustments for mobile devices */
+    .sidebar .links a {
+        font-size: 1em; /* Adjust font size for readability */
+        margin: 8px 0; /* A bit more spacing between links */
+    }
+
+    /* Adjust the size of the title and description for smaller screens */
+    .name {
+        font-size: 1.5em; /* Reduce the title size on small screens */
+    }
+
+    .description p {
+        font-size: 1.1em; /* Reduce the description text size */
+    }
+
+    /* Ensure lines don't extend too far on small screens */
+    .line {
+        width: 100%; /* Ensure lines go all the way across */
+        margin: 10px 0; /* Adjust spacing */
+    }
+
+    /* Reduce space in between elements */
+    header, .links, .description {
+        text-align: left; /* Align everything left for better mobile readability */
+    }
+
+    .sidebar img {
+        width: 80px; /* Make the profile picture smaller for mobile */
+        margin-bottom: 10px;
+    }
+}
+
+/* Even smaller screens (extra mobile, e.g., portrait phones) */
+@media (max-width: 480px) {
+    /* Adjust font sizes further on smaller screens */
+    .name {
+        font-size: 1.3em;
+    }
+
+    .description p {
+        font-size: 1em;
+    }
+
+    .sidebar img {
+        width: 60px; /* Even smaller profile picture */
+    }
+
+    /* Make the links larger on mobile for easier clicking */
+    .sidebar .links a {
+        font-size: 1.1em;
+    }
+
+    /* Adjust sidebar text padding */
+    .sidebar .info {
+        font-size: 0.9em; /* Smaller font size for mobile screens */
+    }
+}
+
     </style>
 </head>
 <body>
