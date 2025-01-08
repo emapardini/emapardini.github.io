@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Emanuele Pardini</title>
+    <title>University Notes</title>
     
     <style>
         html, body {
@@ -13,7 +13,7 @@
         }
 
         body {
-            font-family: 'Times', serif; /* Using Times font */
+            font-family: 'Georgia', serif; /* Using Georgia font */
             background-color: #FEFCFB;
             display: flex;
             height: 100%;
@@ -53,7 +53,7 @@
         }
 
         .main-content {
-            margin-left: 380px;
+            margin-left: 320px;
             padding: 20px 30px;
             flex: 1;
             height: 100%;
@@ -76,27 +76,28 @@
             margin: 10px auto;
         }
 
-        .description {
-            text-align: center;
-            padding: 20px;
+        .note {
+            margin-bottom: 15px;
         }
 
-        .description p {
-            font-size: 1.1em;
-        }
-
-        .links a {
+        .note-title {
             font-weight: bold;
+            margin-right: 10px;
+        }
+
+        .note-description {
+            margin-right: 10px;
+            font-style: italic;
+        }
+
+        .note-link a {
             color: #222;
             text-decoration: none;
+            font-weight: bold;
         }
 
-        .links a:hover {
+        .note-link a:hover {
             text-decoration: underline;
-        }
-
-        .links {
-            text-align: center;
         }
 
         .home-text {
@@ -116,34 +117,36 @@
 </head>
 <body>
     <div class="sidebar">
-        <img src="round_image_paris.png" alt="Your Photo">
-        <h2>Emanuele Pardini</h2>
-        <div class="info">Master's student in Mathematics<br>University of Pisa</div>
-        <div class="info">Email: <a href="mailto:pardini20@gmail.com">pardini20@gmail.com</a></div>
+        <img src="your-photo.jpg" alt="Your Photo">
+        <h2>Basic Info</h2>
+        <div class="info">Email: <a href="mailto:your-email@example.com">your-email@example.com</a></div>
+        <div class="info">Current Position: Master's student in Mathematics</div>
         <div class="links">
-            <a href="https://linkedin.com/in/emanuele-pardini-442549277" target="_blank">LinkedIn</a>
-            <a href="https://github.com/emapardini" target="_blank">GitHub</a>
-            <a href="CV_Emanuele_Pardini.pdf" download>Download CV</a>
+            <a href="https://www.linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
+            <a href="https://github.com/yourprofile" target="_blank">GitHub</a>
+            <a href="your-cv.pdf" download>Download CV</a>
         </div>
     </div>
 
     <div class="main-content">
         <header>
-            <div class="title">Emanuele Pardini</div>
+            <div class="title">University Notes</div>
             <div class="line"></div>
-            <div class="description">
-                <p align="left">Welcome to my personal website! Here you'll find information about me and my current work including my university notes. You can also find some photographs that I've taken around the world.</p>
-                <p align="left">I'm Emanuele Pardini, a master's student in Mathematics at the University of Pisa. My study interests fall within the fields of probability, mathematical analysis, stochastic analysis and mathematical statistics with a particular focus on the mathematics of machine learning.</p>
-            </div>
         </header>
 
-        <div class="links">
-            <div class="line"></div>
-            <a href="notes.html">University Notes</a>
-            <div class="line"></div>
-            <a href="photography.html">Photography Archive</a>
-            <div class="line"></div>
+        <div class="note">
+            <div class="note-title">Istituzioni di Analisi mathematical</div>
+            <div class="note-description">This are my notes (in italian) of the course "Istituzioni di Analisi Matematica". The course covered the basics of functional analysis and some elements of the theory of distributions at the end.</div>
+            <div class="note-link"><a href="/Users/emapardini/Desktop/Github Projects/emapardini.github.io/notes/IstAnMat.pdf" target="_blank">Download PDF</a></div>
         </div>
+
+        <div class="note">
+            <div class="note-title">Istituzioni di Ptobabilità</div>
+            <div class="note-description">This are my notes (in italian) of the course "Istituzioni di Probabilità". The course covered the principles of stochastic analysis.</div>
+            <div class="note-link"><a href="/Users/emapardini/Desktop/Github Projects/emapardini.github.io/notes/IstProb.pdf" target="_blank">Download PDF</a></div>
+        </div>
+
+        <a href="index.html" class="home-text">Return to Homepage</a>
     </div>
 
 </body>
