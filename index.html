@@ -118,69 +118,50 @@
             text-decoration: underline;
         }
 
-        /* Mobile-responsive styles */
-        @media (max-width: 768px) {
+         /* Mobile styles */
+         @media (max-width: 768px) {
             body {
-                flex-direction: column; /* Stack the sidebar below the content */
+                flex-direction: column; /* Stack elements vertically */
             }
 
             /* Adjust sidebar width on mobile devices */
             .sidebar {
-                width: 100%; /* Make the sidebar take up the full width */
+                width: 100%; /* Full width for mobile */
                 padding: 15px;
-                position: relative; /* Sidebar appears below on mobile */
-                box-shadow: none; /* Remove shadow for mobile */
+                position: relative; /* Sidebar comes below in smaller screens */
                 margin-bottom: 15px; /* Space between sidebar and content */
-            }
-
-            /* Content padding adjustments */
-            .main-content {
-                margin-left: 0; /* No space on the left */
-                padding: 15px;
-                width: 100%; /* Ensure full use of available width */
             }
 
             /* Adjust the size of the title and description for smaller screens */
             .name {
-                font-size: 1.5em;
+                font-size: 1.5em; /* Slightly smaller title */
             }
 
             .description p {
-                font-size: 1.1em;
+                font-size: 1em; /* Adjust text size */
             }
 
-            /* Lines should expand fully across for smaller screens */
             .line {
-                width: 100%; /* Ensure lines span the full width */
+                width: 100%; /* Full-width lines for better readability */
             }
 
-            /* Sidebar profile image smaller on mobile */
+            /* Content area padding adjustments */
+            .main-content {
+                margin-left: 0; /* No margin needed, ensure full content width */
+                padding: 15px;
+            }
+
             .sidebar img {
-                width: 80px; /* Smaller image for mobile */
+                width: 80px; /* Resize profile image */
                 margin-bottom: 10px;
             }
 
-            /* Hide the sidebar content when in portrait mode (below 480px wide) */
-            @media (max-width: 480px) {
-                body {
-                    display: block; /* Stack everything vertically */
-                }
-
-                /* Hide sidebar entirely and show "hamburger menu" */
-                .sidebar {
-                    display: none; /* Remove sidebar on small devices */
-                }
-
-                /* Mobile-friendly text links for home and navigation */
-                .links a {
-                    font-size: 1.1em;
-                    margin: 8px 0;
-                    display: block;
-                    padding-left: 20px; /* Add padding for readability */
-                }
+            .links a {
+                font-size: 1.1em;
+                margin: 10px 0;
             }
-
         }
+
 
     </style>
 </head>
