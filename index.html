@@ -113,81 +113,83 @@
             text-decoration: underline;
         }
 
-        /* Sidebar settings for mobile */
-@media (max-width: 768px) {
-    /* Adjust sidebar width on mobile devices */
-    .sidebar {
-        width: 100%; /* Make the sidebar take up the full width */
-        padding: 15px;
-        box-shadow: none; /* Remove shadow for mobile */
-        position: relative; /* Keep the sidebar below the content */
-    }
+        @media (max-width: 768px) {
+            body {
+                flex-direction: column; /* Stack the sidebar below the content */
+            }
 
-    /* Main content adjustments */
-    .main-content {
-        margin-left: 0; /* No space needed on the left */
-        padding: 15px;
-        width: 100%; /* Ensure full use of available width */
-    }
+            /* Adjust sidebar width on mobile devices */
+            .sidebar {
+                width: 100%; /* Make the sidebar take up the full width */
+                padding: 15px;
+                position: relative; /* Sidebar appears below on mobile */
+                box-shadow: none; /* Remove shadow for mobile */
+                margin-bottom: 15px; /* Space between sidebar and content */
+            }
 
-    /* Links text adjustments for mobile devices */
-    .sidebar .links a {
-        font-size: 1em; /* Adjust font size for readability */
-        margin: 8px 0; /* A bit more spacing between links */
-    }
+            /* Adjust content padding */
+            .main-content {
+                margin-left: 0; /* No space on the left */
+                padding: 15px;
+                width: 100%; /* Ensure full use of available width */
+            }
 
-    /* Adjust the size of the title and description for smaller screens */
-    .name {
-        font-size: 1.5em; /* Reduce the title size on small screens */
-    }
+            /* Adjust links' text and layout for small screens */
+            .sidebar .links a {
+                font-size: 1.1em; /* Make links more legible */
+                margin: 8px 0; /* More space between links */
+            }
 
-    .description p {
-        font-size: 1.1em; /* Reduce the description text size */
-    }
+            /* Adjust the size of the title and description for smaller screens */
+            .name {
+                font-size: 1.5em;
+            }
 
-    /* Ensure lines don't extend too far on small screens */
-    .line {
-        width: 100%; /* Ensure lines go all the way across */
-        margin: 10px 0; /* Adjust spacing */
-    }
+            .description p {
+                font-size: 1.1em;
+            }
 
-    /* Reduce space in between elements */
-    header, .links, .description {
-        text-align: left; /* Align everything left for better mobile readability */
-    }
+            /* Lines should expand fully across for smaller screens */
+            .line {
+                width: 100%; /* Ensure lines span the full width */
+            }
 
-    .sidebar img {
-        width: 80px; /* Make the profile picture smaller for mobile */
-        margin-bottom: 10px;
-    }
-}
+            /* Sidebar profile image smaller on mobile */
+            .sidebar img {
+                width: 80px; /* Smaller image for mobile */
+                margin-bottom: 10px;
+            }
+        }
 
-/* Even smaller screens (extra mobile, e.g., portrait phones) */
-@media (max-width: 480px) {
-    /* Adjust font sizes further on smaller screens */
-    .name {
-        font-size: 1.3em;
-    }
+        @media (max-width: 480px) {
+            /* Further adjustments for extra-small screens (portrait smartphones) */
+            .sidebar img {
+                width: 60px; /* Smaller profile image */
+            }
 
-    .description p {
-        font-size: 1em;
-    }
+            .name {
+                font-size: 1.3em;
+            }
 
-    .sidebar img {
-        width: 60px; /* Even smaller profile picture */
-    }
+            .description p {
+                font-size: 1em;
+            }
 
-    /* Make the links larger on mobile for easier clicking */
-    .sidebar .links a {
-        font-size: 1.1em;
-    }
+            .sidebar .links a {
+                font-size: 1em; /* Slightly smaller link text */
+            }
 
-    /* Adjust sidebar text padding */
-    .sidebar .info {
-        font-size: 0.9em; /* Smaller font size for mobile screens */
-    }
-}
+            /* Move the title to fit better */
+            header, .links, .description {
+                text-align: left;
+            }
 
+            .line {
+                width: 100%;
+                margin: 5px auto; /* Adjust line spacing */
+            }
+
+        }
     </style>
 </head>
 <body>
