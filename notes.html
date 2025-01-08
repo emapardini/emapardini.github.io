@@ -124,6 +124,7 @@
             text-decoration: underline;
         }
 
+        /* Mobile-responsive styles */
         @media (max-width: 768px) {
             body {
                 flex-direction: column; /* Stack the sidebar below the content */
@@ -138,17 +139,11 @@
                 margin-bottom: 15px; /* Space between sidebar and content */
             }
 
-            /* Adjust content padding */
+            /* Content padding adjustments */
             .main-content {
                 margin-left: 0; /* No space on the left */
                 padding: 15px;
                 width: 100%; /* Ensure full use of available width */
-            }
-
-            /* Adjust links' text and layout for small screens */
-            .sidebar .links a {
-                font-size: 1.1em; /* Make links more legible */
-                margin: 8px 0; /* More space between links */
             }
 
             /* Adjust the size of the title and description for smaller screens */
@@ -170,34 +165,25 @@
                 width: 80px; /* Smaller image for mobile */
                 margin-bottom: 10px;
             }
-        }
 
-        @media (max-width: 480px) {
-            /* Further adjustments for extra-small screens (portrait smartphones) */
-            .sidebar img {
-                width: 60px; /* Smaller profile image */
-            }
+            /* Hide the sidebar content when in portrait mode (below 480px wide) */
+            @media (max-width: 480px) {
+                body {
+                    display: block; /* Stack everything vertically */
+                }
 
-            .name {
-                font-size: 1.3em;
-            }
+                /* Hide sidebar entirely and show "hamburger menu" */
+                .sidebar {
+                    display: none; /* Remove sidebar on small devices */
+                }
 
-            .description p {
-                font-size: 1em;
-            }
-
-            .sidebar .links a {
-                font-size: 1em; /* Slightly smaller link text */
-            }
-
-            /* Move the title to fit better */
-            header, .links, .description {
-                text-align: left;
-            }
-
-            .line {
-                width: 100%;
-                margin: 5px auto; /* Adjust line spacing */
+                /* Mobile-friendly text links for home and navigation */
+                .links a {
+                    font-size: 1.1em;
+                    margin: 8px 0;
+                    display: block;
+                    padding-left: 20px; /* Add padding for readability */
+                }
             }
 
         }
