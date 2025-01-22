@@ -6,84 +6,147 @@
     <title>University Notes</title>
     
     <style>
-        html, body {
-            height: 100%;
-            margin: 0;
-            padding: 0;
-        }
 
-        body {
-            font-family: 'Times', serif; /* Using Times font */
-            background-color: #FEFCFB;
-            display: flex;
-            height: 100%;
-        }
+    html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
 
-        .sidebar {
-            background-color: #95bf74;
-            width: 300px;
-            padding: 20px;
-            height: 100%;
-            position: fixed;
-            top: 0;
-            left: 0;
-            box-shadow: 4px 0 8px rgba(0, 0, 0, 0.1);
-            overflow-y: auto;
-        }
+@font-face {
+    font-family: "Computer Modern";
+    src: url('http://mirrors.ctan.org/fonts/cm-unicode/fonts/otf/cmunss.otf');
+}
 
-        .sidebar img {
-            max-width: 100%;
-            border-radius: 50%;
-            margin-bottom: 15px;
-        }
+@font-face {
+    font-family: "Computer Modern";
+    src: url('http://mirrors.ctan.org/fonts/cm-unicode/fonts/otf/cmunsx.otf');
+    font-weight: bold;
+}
 
-        .sidebar .info {
-            margin: 10px 0;
-        }
+body {
+    font-family: "Computer Modern", sans-serif;
+    background-color: #FEFCFB;
+    display: flex;
+    height: auto;
+    color: #555;
+}
 
-        .sidebar .links a {
-            display: block;
-            margin: 10px 0;
-            color: #222;
-            text-decoration: none;
-            font-weight: bold;
-        }
+.sidebar {
+    background-color: #95bf74;
+    width: 300px;
+    padding: 20px;
+    height: auto;
+    position: fixed;
+    top: 20pt;
+    left: 20pt;
+    bottom: 20pt;
+    box-shadow: 4px 0 8px rgba(0, 0, 0, 0.1);
+    color: #333;
+    font-size: 14px;
+    line-height: 1.8;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align everything to the left */
+    justify-content: flex-start;
+}
 
-        .sidebar .links a:hover {
-            text-decoration: underline;
-        }
+.sidebar img {
+    margin-top: 15pt;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15pt;
+    width: 170px; /* Set the width to ensure the image doesn't get too big */
+    height: 170px; /* Set a fixed height to maintain aspect ratio */
+    object-fit: cover; /* Ensures aspect ratio is maintained and prevents deformation */
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
 
-        .sidebar .info a {
-            color: black; /* Change this to any color you'd like */
-            text-decoration: none; /* Optional: Remove underline if desired */
-        }
+.sidebar h2 {
+    margin-bottom: 15px;
+    font-size: 1.5em;
+    text-align: left;
+    align-self: stretch; /* Ensure it's left aligned while taking full width */
+}
 
+.sidebar .info {
+    margin-left: 40pt;
+    margin-right: auto;
+    text-align: left;
+    align-self: stretch; /* Align text to the left */
+}
 
-        .main-content {
-            margin-left: 380px;
-            padding: 20px 30px;
-            flex: 1;
-            height: 100%;
-            overflow-y: auto;
-        }
+.sidebar .info a {
+    color: #333;
+    text-decoration: none;
+    font-weight: normal;
+}
 
-        header {
-            text-align: center;
-            margin-bottom: 20px;
-        }
+.sidebar .links {
+    text-align: left;
+    align-self: stretch; /* Align text links to the left */
+    margin-left: 40pt;
+    margin-right: auto;
+}
 
-        .title {
-            font-weight: bold;
-            font-size: 2em;
-        }
+.sidebar .links a {
+    color: #222;
+    text-decoration: none;
+}
 
-        .line {
-            width: calc(100% - 340px);
-            border: 1px solid #222;
-            margin: 10px auto;
-        }
+.sidebar .links a:hover {
+    text-decoration: underline;
+}
 
-        .note {
+.main-content {
+    margin-left: 400px;
+    padding: 40px;
+    padding-right: calc(40px + 2cm);
+    flex: 1;
+    height: 100%;
+}
+
+header {
+    text-align: left;
+    margin-top: 15pt;
+    margin-bottom: 30px;
+}
+
+.title {
+    font-weight: bold;
+    font-size: 1.8em;
+    color: #333;
+}
+
+.description {
+    text-align: left;
+    padding: 20px;
+}
+
+.description p {
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.links {
+    text-align: left;
+    margin-top: 30px;
+}
+
+.links a {
+    display: block;
+    margin: 20px 0;
+    color: #333;
+    text-decoration: none;
+}
+
+.links a:hover {
+    text-decoration: underline;
+}
+
+.note {
             padding: 20px;
         }
 
@@ -91,6 +154,7 @@
             font-weight: bold;
             font-size: 1.2em;
             margin-right: 10px;
+            color: #333;
         }
 
         .note-description {
@@ -100,7 +164,7 @@
         }
 
         .note-link a {
-            color: #222;
+            color: #333;
             font-size: 1.1em;
             text-decoration: none;
             font-weight: bold;
@@ -110,85 +174,67 @@
             text-decoration: underline;
         }
 
-        .home-text {
-            display: block;
-            margin-top: 20px;
-            text-align: center;
-            font-size: 1em;
-            font-weight: normal;
-            color: #222;
-            text-decoration: none;
-        }
+.home-text {
+    display: block;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 1em;
+    font-weight: normal;
+    color: #333;
+    text-decoration: none;
+}
 
-        .home-text:hover {
-            text-decoration: underline;
-        }
+.home-text:hover {
+    text-decoration: underline;
+}
 
-        /* Mobile styles */
-        @media (max-width: 768px) {
-            body {
-                flex-direction: column; /* Stack elements vertically */
-            }
+/* Mobile styles */
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+    }
 
-            /* Adjust sidebar layout on mobile */
-            .sidebar {
-                width: 100%; /* Full width on mobile */
-                padding: 15px;
-                position: relative; /* Sidebar comes above the content on small screens */
-                margin-bottom: 20px; /* Space between sidebar and content */
-                height: 35%; /* Don't stick to full height on small screens */
-            }
+    .sidebar {
+        width: 100%;
+        padding: 15px;
+        position: relative;
+        margin-bottom: 20px;
+        height: 35%;
+    }
 
-            .sidebar img {
-                width: 80px; /* Resize profile image */
-                margin-bottom: 10px;
-            }
+    .sidebar img {
+        width: 80px;
+        margin-bottom: 10px;
+    }
 
-            /* Layout adjustment for photo and description to be next to each other */
-            .sidebar .info {
-                display: inline-block;
-                margin-right: 15px;
-            }
+    .sidebar .info {
+        display: inline-block;
+        margin-right: 15px;
+    }
 
-            .sidebar .info a {
-                color: #333; /* For email link */
-                text-decoration: none;
-            }
+    .main-content {
+        margin-left: 0;
+        padding: 15px;
+        width: 100%;
+    }
 
-            .main-content {
-                margin-left: 0;
-                padding: 15px;
-                width: 100%; /* Take up full width */
-            }
+    .name {
+        font-size: 1.5em;
+    }
 
-            /* Adjusting the name title size */
-            .name {
-                font-size: 1.5em; /* Slightly smaller title */
-            }
+    .description p {
+        font-size: 1em;
+        margin-bottom: 20px; /* Ensure spacing persists on mobile */
+    }
+}
 
-            /* Reducing font sizes for mobile screen */
-            .description p {
-                font-size: 1em; /* Adjust text size */
-            }
-
-            /* Adjust the line widths for mobile devices */
-            .line {
-                width: 100%; /* Make the line full width on mobile screens */
-            }
-
-            /* Link styling adjustments */
-            .links a {
-                font-size: 1.1em;
-            }
-        }
 
     </style>
 </head>
 <body>
     <div class="sidebar">
         <img src="round_image_paris.png" alt="Your Photo">
-        <h2>Emanuele Pardini</h2>
-        <div class="info">Master's student in Mathematics<br>University of Pisa</div>
+        <div class="info"><b style="font-size: 1.3em;">Emanuele Pardini</b> <br> Master's student in Mathematics<br>University of Pisa</div>
         <div class="info">Email: <a href="mailto:pardini20@gmail.com">pardini20@gmail.com</a></div>
         <div class="links">
             <a href="https://linkedin.com/in/emanuele-pardini-442549277" target="_blank" align="left">LinkedIn</a>
@@ -201,8 +247,11 @@
     <div class="main-content">
         <header>
             <div class="title">University Notes</div>
-            <div class="line"></div>
         </header>
+
+        <div class="description">
+            <p>Here you can find some notes of university courses that I have taken during the years. Keep in mind that, sometimes, they were written in a hurry, so they may contain errors. If you find any don't hesitate to send me an email and let me know.</p>
+        </div>
 
         <div class="note">
             <div class="note-title">Istituzioni di Analisi matematica</div>
