@@ -13,19 +13,24 @@
     padding: 0;
 }
 
+/* Sans-Serif Regular */
 @font-face {
-    font-family: "Computer Modern";
-    src: url('http://mirrors.ctan.org/fonts/cm-unicode/fonts/otf/cmunss.otf');
+    font-family: 'Computer Modern Sans';
+    src: url('fonts/cmunss.ttf') format('truetype');
+    font-weight: normal; /* Regular */
+    font-style: normal;
 }
 
+/* Sans-Serif Bold */
 @font-face {
-    font-family: "Computer Modern";
-    src: url('http://mirrors.ctan.org/fonts/cm-unicode/fonts/otf/cmunsx.otf');
-    font-weight: bold;
+    font-family: 'Computer Modern Sans';
+    src: url('fonts/cmunsx.ttf') format('truetype');
+    font-weight: bold; /* Bold */
+    font-style: normal;
 }
 
 body {
-    font-family: "Computer Modern", sans-serif;
+    font-family: 'Computer Modern Sans';
     background-color: #FEFCFB;
     display: flex;
     height: auto;
@@ -271,7 +276,9 @@ header {
             <div class="note-link"><a href="notes/ErgTheory.pdf" target="_blank">Download PDF</a></div>
         </div>
 
-        <a href="index.html" class="home-text">Return to Homepage</a>
+        
+
+        <a style="margin-top: 20pt;" href="index.html" class="home-text">Return to Homepage</a>
     </div>
 
 </body>
