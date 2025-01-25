@@ -172,12 +172,13 @@ header {
     }
 
     .sidebar {
+        display: flex;
         width: auto;
         padding: 15px;
         position: relative;
         margin-bottom: 20px;
         margin-left: 10px;
-        margin-left: 10px;
+        margin-right: 10px;
         margin-top: 10px;
         height: 35%;
     }
@@ -189,8 +190,10 @@ header {
     }
 
     .sidebar .info {
-        display: inline-block;
-        margin-right: 15px;
+        display: flex;
+        flex: 1;
+        flex-direction: row;
+        margin-right: 10px;
     }
 
     .main-content {
