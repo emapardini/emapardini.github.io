@@ -44,7 +44,7 @@ body {
     height: auto;
     box-sizing: border-box;
     position: fixed;
-    box-shadow: 4px 0 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 4px 0 8px rgba(0, 0, 0, 0.2);
     color: #333;
     font-size: 14px;
     line-height: 1.8;
@@ -102,6 +102,26 @@ body {
     flex-direction: column;
     align-items: flex-start; /* Align everything to the left */
     justify-content: flex-start;
+}
+
+.main-content .navi-bar {
+    background-color: #95bf74;
+    padding: 10px;
+    height: 40px;
+    margin-bottom: 40px;
+    box-sizing: border-box;
+    box-shadow: 4px 0 8px rgba(0, 0, 0, 0.2);
+    color: #333;
+    font-size: 1em;
+    border-radius: 15px;
+}
+
+.main-content .navi-bar a {
+    display: inline;
+    padding: 50px;
+    color: #333;
+    font-weight: 500;
+    text-decoration: none;
 }
 
 .main-content .title {
@@ -240,17 +260,13 @@ body {
     </div>
 
     <div class="main-content">
-            <div class="title">Homepage</div>
+            <div class="navi-bar"><a href="notes.html">University Notes</a>  <a href="photography.html">Photography Archive</a></div>
+            <header><div class="title">Homepage</div></header>
             <div class="description">
                 <p>Hello!</p> 
                 <p>Here you'll find information about me and my work, including my university notes. You can also find some photographs that I've taken around the world (WIP).</p>
                 <p>I'm Emanuele Pardini, a master's student in Mathematics at the University of Pisa. My study interests fall within the fields of probability, mathematical analysis, stochastic analysis and mathematical statistics with a particular focus on the mathematics of machine learning.</p>
             </div>
-
-        <div class="links">
-            <a href="notes.html">University Notes</a>
-            <a href="photography.html">Photography Archive</a>
-        </div>
     </div>
 
 </body>
