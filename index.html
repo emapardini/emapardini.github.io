@@ -32,7 +32,6 @@
 body {
     font-family: 'Computer Modern Sans';
     background-color: #FEFCFB;
-    display: flex;
     height: auto;
     color: #333;
 }
@@ -40,12 +39,11 @@ body {
 .sidebar {
     background-color: #95bf74;
     width: 20%;
-    padding: 20px;
+    padding: 50px;
+    margin: 40px;
     height: auto;
+    box-sizing: border-box;
     position: fixed;
-    top: 20px;
-    left: 20px;
-    bottom: 20px;
     box-shadow: 4px 0 8px rgba(0, 0, 0, 0.1);
     color: #333;
     font-size: 14px;
@@ -57,19 +55,17 @@ body {
 }
 
 .sidebar img {
-    margin-top: 10px;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 10px;
+    margin-bottom: 40px;
     max-width: 100%; /* Set the width to ensure the image doesn't get too big */
     max-height: 100%;
 }
 
 .sidebar .info {
-    margin-left: 40px;
-    margin-right: auto;
     text-align: left;
-    align-self: stretch; /* Align text to the left */
+    align-self: stretch;
+    margin-bottom: 30px;
 }
 
 .sidebar .info a {
@@ -80,9 +76,8 @@ body {
 
 .sidebar .links {
     text-align: left;
-    align-self: stretch; /* Align text links to the left */
-    margin-left: 40px;
-    margin-right: auto;
+    align-self: stretch;
+    line-height: 45px;
 }
 
 .sidebar .links a {
@@ -96,49 +91,54 @@ body {
 
 .main-content {
     text-align: left;
-    margin-top: 15px;
+    margin-top: 30px;
     margin-bottom: 30px;
     margin-left: 400px;
+    margin-right: 100px;
     padding: 40px;
-    padding-right: calc(40px + 2cm);
-    flex: 1;
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align everything to the left */
+    justify-content: flex-start;
 }
 
-.title {
+.main-content .title {
     font-weight: bold;
     font-size: 1.8em;
     color: #333;
+    margin-bottom: 20px;
 }
 
-.description {
+.main-content .description {
     text-align: left;
-    padding: 20px;
+    line-height: 20pt;
 }
 
-.description p {
+.main-content .description p {
     font-size: 1.1em;
     color: #555;
     margin-bottom: 30px;
 }
 
-.links {
+.main-content .links {
     text-align: left;
+    line-height: 30pt;
     margin-top: 30px;
 }
 
-.links a {
+.main-content .links a {
     display: block;
     margin: 20px 0;
     color: #333;
     text-decoration: none;
 }
 
-.links a:hover {
+.main-content .links a:hover {
     text-decoration: underline;
 }
 
-.home-text {
+.main-content .home-text {
     display: block;
     margin-top: 20px;
     text-align: center;
@@ -148,11 +148,11 @@ body {
     text-decoration: none;
 }
 
-.home-text:hover {
+.main-content .home-text:hover {
     text-decoration: underline;
 }
 
-    </style>
+</style>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="google-site-verification" content="CPQa-UOmiLVrL7CGdBXJH-abYxKDZClDa-ULYzpKfPA" />
 </head>
@@ -162,8 +162,11 @@ body {
         <div class="info"><b style="font-size: 1.3em;">Emanuele Pardini</b> <br>Master's student in Mathematics<br>University of Pisa</div>
         <div class="links">
             <a href="mailto:pardini20@gmail.com">Email</a>
+            <br>
             <a href="https://linkedin.com/in/emanuele-pardini-442549277" target="_blank">LinkedIn</a>
+            <br>
             <a href="https://github.com/emapardini" target="_blank">GitHub</a>
+            <br>
             <a href="CV_Emanuele_Pardini.pdf" download>Download CV</a>
         </div>
     </div>

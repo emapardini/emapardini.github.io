@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>University Notes</title>
+    <title>Emanuele Pardini</title>
     
     <style>
 
@@ -32,20 +32,18 @@
 body {
     font-family: 'Computer Modern Sans';
     background-color: #FEFCFB;
-    display: flex;
     height: auto;
-    color: #555;
+    color: #333;
 }
 
 .sidebar {
     background-color: #95bf74;
-    width: 300px;
-    padding: 20px;
+    width: 20%;
+    padding: 50px;
+    margin: 40px;
     height: auto;
+    box-sizing: border-box;
     position: fixed;
-    top: 20pt;
-    left: 20pt;
-    bottom: 20pt;
     box-shadow: 4px 0 8px rgba(0, 0, 0, 0.1);
     color: #333;
     font-size: 14px;
@@ -57,29 +55,17 @@ body {
 }
 
 .sidebar img {
-    margin-top: 15pt;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 15pt;
-    width: 170px; /* Set the width to ensure the image doesn't get too big */
-    height: 170px; /* Set a fixed height to maintain aspect ratio */
-    object-fit: cover; /* Ensures aspect ratio is maintained and prevents deformation */
-    border-radius: 50%;
-    margin-bottom: 15px;
-}
-
-.sidebar h2 {
-    margin-bottom: 15px;
-    font-size: 1.5em;
-    text-align: left;
-    align-self: stretch; /* Ensure it's left aligned while taking full width */
+    margin-bottom: 40px;
+    max-width: 100%; /* Set the width to ensure the image doesn't get too big */
+    max-height: 100%;
 }
 
 .sidebar .info {
-    margin-left: 40pt;
-    margin-right: auto;
     text-align: left;
-    align-self: stretch; /* Align text to the left */
+    align-self: stretch;
+    margin-bottom: 30px;
 }
 
 .sidebar .info a {
@@ -90,9 +76,8 @@ body {
 
 .sidebar .links {
     text-align: left;
-    align-self: stretch; /* Align text links to the left */
-    margin-left: 40pt;
-    margin-right: auto;
+    align-self: stretch;
+    line-height: 45px;
 }
 
 .sidebar .links a {
@@ -105,139 +90,99 @@ body {
 }
 
 .main-content {
-    margin-left: 400px;
-    padding: 40px;
-    padding-right: calc(40px + 2cm);
-    flex: 1;
-    height: 100%;
-}
-
-header {
     text-align: left;
-    margin-top: 15pt;
-    margin-bottom: 30px;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    margin-left: 400px;
+    margin-right: 100px;
+    padding: 40px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align everything to the left */
+    justify-content: flex-start;
 }
 
-.title {
+.main-content .title {
     font-weight: bold;
     font-size: 1.8em;
     color: #333;
+    margin-bottom: 20px;
 }
 
-.description {
+.main-content .description {
     text-align: left;
-    padding: 20px;
+    line-height: 25px;
 }
 
-.description p {
+.main-content .description p {
     font-size: 1.1em;
     color: #555;
     margin-bottom: 30px;
 }
 
-.links {
+.main-content .links {
     text-align: left;
+    line-height: 30pt;
     margin-top: 30px;
 }
 
-.links a {
+.main-content .links a {
     display: block;
     margin: 20px 0;
     color: #333;
     text-decoration: none;
 }
 
-.links a:hover {
+.main-content .links a:hover {
     text-decoration: underline;
 }
 
-.note {
-            padding: 20px;
-        }
-
-        .note-title {
-            font-weight: bold;
-            font-size: 1.2em;
-            margin-right: 10px;
-            color: #333;
-        }
-
-        .note-description {
-            margin-right: 10px;
-            font-size: 1.1em;
-            font-style: normal;
-        }
-
-        .note-link a {
-            color: #333;
-            font-size: 1.1em;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        .note-link a:hover {
-            text-decoration: underline;
-        }
-
-.home-text {
+.main-content .home-text {
     display: block;
     margin-top: 20px;
     text-align: center;
     font-size: 1em;
     font-weight: normal;
-    color: #333;
+    color: #555;
     text-decoration: none;
 }
 
-.home-text:hover {
+.main-content .home-text:hover {
     text-decoration: underline;
 }
 
-/* Mobile styles */
-@media (max-width: 768px) {
-    body {
-        flex-direction: column;
-    }
-
-    .sidebar {
-        width: auto;
-        padding: 15px;
-        position: relative;
-        margin-bottom: 20px;
-        margin-left: 10px;
-        margin-right: 10px;
-        margin-top: 10px;
-        height: 20%;
-    }
-
-    .sidebar img {
-        width: auto;
-        margin-bottom: 10px;
-    }
-
-    .sidebar .info {
-        display: inline-block;
-        margin-right: 15px;
-    }
-
-    .main-content {
-        margin-left: 0;
-        padding: 15px;
-        width: 100%;
-    }
-
-    .name {
-        font-size: 1.5em;
-    }
-
-    .description p {
-        font-size: 1em;
-        margin-bottom: 20px; /* Ensure spacing persists on mobile */
-    }
+.note {
+    padding: 20px;
 }
 
+.note-title {
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-right: 10px;
+    color: #333;
+}
 
-    </style>
+.note-description {
+    margin-right: 10px;
+    font-size: 1em;
+    font-style: normal;
+    color: #555;
+}
+
+.note-link a {
+    color: #333;
+    font-size: 1.1em;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.note-link a:hover {
+    text-decoration: underline;
+}
+
+</style>
+
 </head>
 <body>
     <div class="sidebar">
@@ -245,8 +190,11 @@ header {
         <div class="info"><b style="font-size: 1.3em;">Emanuele Pardini</b> <br> Master's student in Mathematics<br>University of Pisa</div>
         <div class="links">
             <a href="mailto:pardini20@gmail.com">Email</a>
+            <br>
             <a href="https://linkedin.com/in/emanuele-pardini-442549277" target="_blank">LinkedIn</a>
+            <br>
             <a href="https://github.com/emapardini" target="_blank">GitHub</a>
+            <br>
             <a href="CV_Emanuele_Pardini.pdf" download>Download CV</a>
         </div>
         </div>
@@ -281,7 +229,7 @@ header {
 
         
 
-        <a style="margin-top: 20pt;" href="index.html" class="home-text">Return to Homepage</a>
+        <a style="margin-top: 20pt; color: #333" href="index.html" class="home-text">Return to Homepage</a>
     </div>
 
 </body>
