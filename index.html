@@ -152,8 +152,54 @@ body {
     text-decoration: underline;
 }
 
+<style>
+/* Mobile-friendly styles */
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        position: relative;
+        padding: 20px;
+        margin: 0;
+        box-shadow: none; /* Rimuove l'ombra */
+    }
+
+    .sidebar img {
+        max-width: 150px; /* Ridimensiona l'immagine */
+        margin: 0 auto 20px auto; /* Centra l'immagine */
+    }
+
+    .main-content {
+        margin: 0;
+        padding: 20px;
+    }
+
+    .sidebar .links {
+        line-height: 30px; /* Aumenta leggibilità */
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 14px; /* Scala il testo per schermi molto piccoli */
+    }
+
+    .sidebar img {
+        max-width: 120px; /* Immagine ancora più compatta */
+    }
+
+    .main-content .description p {
+        font-size: 1em; /* Testo più piccolo */
+    }
+
+    .main-content .links a {
+        font-size: 1em;
+    }
+}
 </style>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+</style>
 <meta name="google-site-verification" content="CPQa-UOmiLVrL7CGdBXJH-abYxKDZClDa-ULYzpKfPA" />
 </head>
 <body>
