@@ -158,7 +158,7 @@ body {
 @media (max-width: 768px) {
     .sidebar {
         width: calc(100% - 40px);
-        height:20%;
+        height: 20%;
         position: relative;
         padding: 25px;
         margin: 20px;
@@ -178,6 +178,28 @@ body {
 
     .sidebar .links {
         line-height: 30px;
+    }
+}
+
+@media (max-width: 768px) and (orientation: landscape) {
+    .sidebar {
+        width: 40%;
+        margin: 10px 20px;
+        padding: 15px;
+    }
+
+    .main-content {
+        margin-top: 0;
+        margin-left: 20px;
+        padding: 10px;
+    }
+
+    .sidebar img {
+        max-width: 120px; /* Immagine ridotta per lo spazio orizzontale */
+    }
+
+    .main-content .description p {
+        font-size: 0.9em; /* Testo più piccolo per risparmiare spazio */
     }
 }
 
