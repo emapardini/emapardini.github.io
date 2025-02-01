@@ -31,24 +31,65 @@
 
 body {
     font-family: 'Computer Modern Sans';
-    background-color: #FEFCFB;
+    background-color: #000;
     height: auto;
-    color: #333;
+    color: #eee;
+}
+
+header {
+    display: flex;
+    padding: 5px;
+    align-items: center;
+    border-bottom: 1px solid #979797;
+    background-color: #212124;
+}
+
+.logo {
+    margin-right: auto;
+    margin-left: 40px;
+    color: #eee;
+    font-weight: bold;
+}
+
+.navigation {
+    margin-right: auto;
+}
+
+.navigation a{
+    color: #eee;
+    padding: 12px;
+    text-decoration: none;
+}
+
+.navigation a:hover {
+    text-decoration: underline;
+}
+
+.navigation .active {
+    background-color: #0088cc;
+    border-radius: 30px;
+    color: #eee;
+}
+
+.wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 40px;
+    width: 100%;
+    height: auto;
+    padding: 40px;
+    box-sizing: border-box;
 }
 
 .sidebar {
-    background-color: #95bf74;
-    width: 20%;
+    background-color: #212124;
+    flex-basis: 20%;
     padding: 50px;
-    margin: 40px;
-    height: auto;
+    margin-bottom: 40px;
     box-sizing: border-box;
-    position: fixed;
-    box-shadow: 4px 0 8px rgba(0, 0, 0, 0.2);
-    color: #333;
+    /*border: 1px solid #818181;*/
     font-size: 14px;
-    line-height: 1.8;
-    border-radius: 20px;
+    border-radius: 30px;
     display: flex;
     flex-direction: column;
     align-items: flex-start; /* Align everything to the left */
@@ -58,7 +99,7 @@ body {
 .sidebar img {
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 40px;
+    margin-bottom: 50px;
     max-width: 100%; /* Set the width to ensure the image doesn't get too big */
     max-height: 100%;
 }
@@ -66,23 +107,24 @@ body {
 .sidebar .info {
     text-align: left;
     align-self: stretch;
-    margin-bottom: 30px;
 }
 
 .sidebar .info a {
-    color: #333;
-    text-decoration: none;
     font-weight: normal;
 }
 
 .sidebar .links {
+    display: flex;
+    flex-direction: column;
     text-align: left;
-    align-self: stretch;
-    line-height: 45px;
+    padding-top: 50px;
+    line-height: auto;
 }
 
 .sidebar .links a {
-    color: #222;
+    color: #0088cc;
+    margin-top: 10px;
+    margin-bottom: 10px;
     text-decoration: none;
 }
 
@@ -91,66 +133,30 @@ body {
 }
 
 .main-content {
+    background-color: #000;
+    border-radius: 20px;
     text-align: left;
-    margin-top: 30px;
-    margin-bottom: 40px;
+    flex-basis: calc(80% - 40px);
+    /*margin-right: 40px;*/
+    /*margin-top: 30px;
     margin-left: 400px;
-    margin-right: 100px;
-    padding: 40px;
-    height: 100%;
+    margin-right: 40px;*/
+    padding: 20px;
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* Align everything to the left */
-    justify-content: flex-start;
-}
-
-.main-content .title {
-    font-weight: bold;
-    font-size: 1.8em;
-    color: #333;
-    margin-bottom: 20px;
+    /*align-items: flex-start; /* Align everything to the left
+    justify-content: flex-start;*/
 }
 
 .main-content .description {
     text-align: left;
-    line-height: 25px;
+    color: #979797;
+    line-height: 20pt;
 }
 
 .main-content .description p {
     font-size: 1.1em;
-    color: #555;
     margin-bottom: 30px;
-}
-
-.main-content .links {
-    text-align: left;
-    line-height: 30pt;
-    margin-top: 30px;
-}
-
-.main-content .links a {
-    display: block;
-    margin: 20px 0;
-    color: #333;
-    text-decoration: none;
-}
-
-.main-content .links a:hover {
-    text-decoration: underline;
-}
-
-.main-content .home-text {
-    display: block;
-    margin-top: 20px;
-    text-align: center;
-    font-size: 1em;
-    font-weight: normal;
-    color: #555;
-    text-decoration: none;
-}
-
-.main-content .home-text:hover {
-    text-decoration: underline;
 }
 
 .note {
@@ -160,19 +166,17 @@ body {
 .note-title {
     font-weight: bold;
     font-size: 1.2em;
-    margin-right: 10px;
-    color: #333;
+    color: #979797;
 }
 
 .note-description {
-    margin-right: 10px;
     font-size: 1em;
     font-style: normal;
-    color: #555;
+    color: #979797;
 }
 
 .note-link a {
-    color: #333;
+    color: #0088cc;
     font-size: 1.1em;
     text-decoration: none;
     font-weight: bold;
@@ -180,25 +184,6 @@ body {
 
 .note-link a:hover {
     text-decoration: underline;
-}
-
-.main-content .navi-bar {
-    background-color: #95bf74;
-    padding: 10px;
-    height: auto;
-    margin-bottom: 40px;
-    box-sizing: border-box;
-    box-shadow: 4px 0 8px rgba(0, 0, 0, 0.2);
-    font-size: 1em;
-    border-radius: 15px;
-}
-
-.main-content .navi-bar a {
-    display: inline;
-    padding: 50px;
-    color: #333;
-    font-weight: 500;
-    text-decoration: none;
 }
 
 /* Mobile-friendly styles */
@@ -260,27 +245,28 @@ body {
 
 </head>
 <body>
+    <header>
+        <div class='logo'><h2>Emanuele Pardini</h2></div>
+        <div class='navigation'>
+            <a href="index.html">Homepage</a>
+            <a class='active' href="notes.html">University Notes</a> 
+            <a href="photography.html">Photography Archive</a>
+        </div>
+    </header>
+    <div class="wrapper">
     <div class="sidebar">
         <img src="round_image_paris.png" alt="Your Photo">
         <div class="info"><b style="font-size: 1.3em;">Emanuele Pardini</b> <br> Master's student in Mathematics<br>University of Pisa</div>
         <div class="links">
             <a href="mailto:pardini20@gmail.com">Email</a>
-            <br>
             <a href="https://linkedin.com/in/emanuele-pardini-442549277" target="_blank">LinkedIn</a>
-            <br>
             <a href="https://github.com/emapardini" target="_blank">GitHub</a>
-            <br>
             <a href="CV_Emanuele_Pardini.pdf" download>CV</a>
-        </div>
         </div>
     </div>
 
     <div class="main-content">
-        <div class="navi-bar"><a href="index.html">Homepage</a>  <a href="photography.html">Photography Archive</a></div>
-        <header>
-            <div class="title">University Notes</div>
-        </header>
-
+        <div><h2>University Notes</h2></div>
         <div class="description">
             <p>Here you can find some notes of university courses that I have taken during the years. Keep in mind that, sometimes, they were written in a hurry, so they may contain errors. If you find any don't hesitate to send me an email and let me know.</p>
         </div>
@@ -303,6 +289,6 @@ body {
             <div class="note-link"><a href="notes/ErgTheory.pdf" target="_blank">Download PDF</a></div>
         </div>
     </div>
-
+    </div>
 </body>
 </html>
