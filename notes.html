@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Emanuele Pardini</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
     
-    <style>
+<style>
 
     html, body {
     height: 100%;
@@ -13,34 +15,34 @@
     padding: 0;
 }
 
-/* Sans-Serif Regular */
-@font-face {
+/*@font-face {
     font-family: 'Computer Modern Sans';
     src: url('fonts/cmunss.ttf') format('truetype');
-    font-weight: normal; /* Regular */
+    font-weight: normal;
     font-style: normal;
 }
 
-/* Sans-Serif Bold */
 @font-face {
     font-family: 'Computer Modern Sans';
     src: url('fonts/cmunsx.ttf') format('truetype');
-    font-weight: bold; /* Bold */
+    font-weight: bold;
     font-style: normal;
-}
+}*/
 
 body {
-    font-family: 'Computer Modern Sans';
-    background-color: #000;
+    /*font-family: 'Computer Modern Sans';*/
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    background-color: #111;
     height: auto;
-    color: #eee;
+    color: #ddd;
 }
 
 header {
     display: flex;
-    padding: 5px;
+    padding: 10px 20px;
     align-items: center;
-    border-bottom: 1px solid #979797;
+    border-bottom: 0.5px solid #333;
     background-color: #212124;
 }
 
@@ -50,25 +52,33 @@ header {
     color: #eee;
     font-weight: bold;
 }
+.logo h2 {
+    letter-spacing: 1px;
+}
 
 .navigation {
     margin-right: auto;
 }
 
 .navigation a{
-    color: #eee;
+    color: #ddd;
     padding: 12px;
+    margin: 10px;
     text-decoration: none;
+    font-size: 1.1em;
+    transition: color 0.3s ease-in-out;
 }
 
 .navigation a:hover {
-    text-decoration: underline;
+    color: #fff;
+    /*font-weight: 400;*/
 }
 
 .navigation .active {
-    background-color: #0088cc;
+    /*background-color: #0088cc;*/
     border-radius: 30px;
-    color: #eee;
+    color: #95BF74;
+    font-weight: 400;
 }
 
 .wrapper {
@@ -84,7 +94,7 @@ header {
 .sidebar {
     background-color: #212124;
     flex-basis: 20%;
-    padding: 50px;
+    padding: 40px;
     margin-bottom: 40px;
     box-sizing: border-box;
     /*border: 1px solid #818181;*/
@@ -94,6 +104,7 @@ header {
     flex-direction: column;
     align-items: flex-start; /* Align everything to the left */
     justify-content: flex-start;
+    border: 1px solid #333;
 }
 
 .sidebar img {
@@ -122,18 +133,21 @@ header {
 }
 
 .sidebar .links a {
-    color: #0088cc;
+    color: #eee;
+    font-weight: 400;
     margin-top: 10px;
     margin-bottom: 10px;
     text-decoration: none;
+    transition: color 0.3s ease-in-out;
 }
 
 .sidebar .links a:hover {
-    text-decoration: underline;
+    color: #95BF74;
+    font-weight: 500;
 }
 
 .main-content {
-    background-color: #000;
+    background-color: #111;
     border-radius: 20px;
     text-align: left;
     flex-basis: calc(80% - 40px);
@@ -150,8 +164,8 @@ header {
 
 .main-content .description {
     text-align: left;
-    color: #979797;
-    line-height: 20pt;
+    line-height: 1.6;
+    color: #ccc;
 }
 
 .main-content .description p {
@@ -161,29 +175,30 @@ header {
 
 .note {
     padding: 20px;
+    line-height: 1.6;
 }
 
 .note-title {
     font-weight: bold;
     font-size: 1.2em;
-    color: #979797;
 }
 
 .note-description {
     font-size: 1em;
     font-style: normal;
-    color: #979797;
+    color: #ccc;
 }
 
 .note-link a {
-    color: #0088cc;
     font-size: 1.1em;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 400;
+    color: #ccc;
+    transition: color 0.3s ease-in-out;
 }
 
 .note-link a:hover {
-    text-decoration: underline;
+    color: #95BF74;
 }
 
 /* Mobile-friendly styles */
@@ -254,7 +269,7 @@ header {
         </div>
     </header>
     <div class="wrapper">
-    <div class="sidebar">
+    <!--<div class="sidebar">
         <img src="round_image_paris.png" alt="Your Photo">
         <div class="info"><b style="font-size: 1.3em;">Emanuele Pardini</b> <br> Master's student in Mathematics<br>University of Pisa</div>
         <div class="links">
@@ -263,7 +278,7 @@ header {
             <a href="https://github.com/emapardini" target="_blank">GitHub</a>
             <a href="CV_Emanuele_Pardini.pdf" download>CV</a>
         </div>
-    </div>
+    </div>-->
 
     <div class="main-content">
         <div><h2>University Notes</h2></div>
